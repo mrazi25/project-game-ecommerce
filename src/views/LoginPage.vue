@@ -73,8 +73,8 @@
           </b-form-text>
         </b-form-group>
 
-        <b-button type="submit" variant="primary">Login</b-button>
-        <b-button type="reset" variant="danger">Reset</b-button>
+        <b-button id="btn-login" type="submit" variant="primary">Login</b-button>
+        <b-button id="btn-reset" type="reset" variant="danger">Reset</b-button>
       </b-form>
     </div>
   </div>
@@ -137,7 +137,7 @@ export default {
         }
       });
       if (emailCheck===passCheck) {
-        window.location.href = '/';
+        window.location.href = '/logged';
         console.log(this.form);
       } else {
         alert("email or password invalid");
@@ -161,6 +161,7 @@ export default {
 <style scoped>
 .container {
   width: 400px;
+  margin-top: 40px;
   border-style: solid;
   border-radius: 5px;
   border-color: rgba(214, 56, 125, 1);
@@ -170,5 +171,13 @@ export default {
 h3 {
   margin-top: 20px;
   text-align: center;
+}
+#btn-login{
+    text-align: center;
+    margin-right: 20px;
+}
+#btn-reset{
+    text-align: center;
+    margin-left: 20px;
 }
 </style>
