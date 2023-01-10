@@ -2,6 +2,7 @@
   <div>
     <NavigationBar />
     <GameCard />
+    
   </div>
 </template>
 
