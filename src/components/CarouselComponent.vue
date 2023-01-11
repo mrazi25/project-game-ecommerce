@@ -13,22 +13,22 @@
         >
             <b-carousel-slide>
                 <template v-slot:img>
-                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/GTAV.jpg" />
+                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/gtav.png" />
                 </template>
             </b-carousel-slide>
             <b-carousel-slide>
                 <template v-slot:img>
-                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/valorant.jpg" />
+                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/Valorant.png" />
                 </template>
             </b-carousel-slide>
             <b-carousel-slide>
                 <template v-slot:img>
-                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/EFootball23.png" />
+                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/efootball.png" />
                 </template>
             </b-carousel-slide>
             <b-carousel-slide>
                 <template v-slot:img>
-                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/minecraft.png" />
+                    <img class="d-block img-fluid w-100" width="1000" height="1000" src="../assets/mineecraft.png" />
                 </template>
             </b-carousel-slide>
         </b-carousel>
