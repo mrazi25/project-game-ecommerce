@@ -20,7 +20,7 @@
                   <th>{{index+1}}</th>
                   <td>
                     <img
-                      :src=" '../assets/GTAV.png'"
+                      :src=" '../assets/GTAV.jpg'"
                       class="img-fluid shadow"
                       width="250"
                     />
@@ -35,7 +35,7 @@
                 </tr>
 
                 <tr>
-                  <td colspan="6" align="right">
+                  <td colspan="3" align="right">
                     <strong>Total Harga :</strong>
                   </td>
                   <td align="right">

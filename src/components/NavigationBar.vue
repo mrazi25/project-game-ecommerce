@@ -61,7 +61,7 @@
                   </ul>
                   <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <router-link class="nav-link" to="/">
+                      <router-link class="nav-link" to="/CartView">
                         Cart <b-icon-cart4></b-icon-cart4
                       ></router-link>
                     </li>

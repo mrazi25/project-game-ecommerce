@@ -1,8 +1,8 @@
 <template>
   <div>
     <NavigationBar />
+    <CarouselComponent />
     <MainPage />
-    <Carousel />
   </div>
   
 </template>
@@ -11,14 +11,14 @@
 // @ is an alias to /src
 import NavigationBar from "@/components/NavigationBar.vue";
 import MainPage from "@/components/MainPage.vue";
-import Carousel from "@/components/Carousel.vue";
+import CarouselComponent from "@/components/CarouselComponent.vue";
 
 export default {
   name: "HomeView",
   components: {
     NavigationBar,
     MainPage,
-    Carousel,
+    CarouselComponent,
   },
 };
 </script>

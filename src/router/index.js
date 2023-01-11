@@ -5,6 +5,7 @@ import LoggedHomeView from '../views/LoggedHome.vue'
 import GameCollections from '../views/GameCollections.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import LoginPage from '../views/LoginPage.vue'
+import CartView from '../views/CartView.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/LoginPage',
     name: 'login',
     component: LoginPage
+  },
+  {
+    path: '/CartView',
+    name: 'cartview',
+    component: CartView
   },
   {
     path: '/about',
