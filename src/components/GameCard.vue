@@ -20,6 +20,7 @@
             </p>
             <p class="card-text">
               <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a> Rp 150 000</a>
             </p>
           </div>
         </div>
@@ -47,7 +48,8 @@
               More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. Each map is purpose-built for team strategies, spectacular plays, and clutch moments. Make the plays others will imitate for years to come.
             </p>
             <p class="card-text">
-              <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a href="#" class="btn btn-primary">Buy Now!</a>
+              <a> Rp 150 000</a>  
             </p>
           </div>
         </div>
@@ -73,7 +75,8 @@
               Light up your world with candles to show what a savvy spelunker and master mountaineer you are!
             </p>
             <p class="card-text">
-              <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a href="#" class="btn btn-primary">Buy Now!</a> 
+              <a> Rp 150 000</a> 
             </p>
           </div>
         </div>
@@ -98,7 +101,8 @@
               trying to escape the Killer and avoid being caught, tortured and killed.
             </p>
             <p class="card-text">
-              <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a href="#" class="btn btn-primary">Buy Now!</a> 
+              <a> Rp 150 000</a> 
             </p>
           </div>
         </div>
@@ -123,7 +127,8 @@
               survival.
             </p>
             <p class="card-text">
-              <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a href="#" class="btn btn-primary">Buy Now!</a> 
+              <a> Rp 150 000</a> 
             </p>
           </div>
         </div>
@@ -148,7 +153,8 @@
               Go up against rivals from around the world and take part in a variety of events. 
             </p>
             <p class="card-text">
-              <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a href="#" class="btn btn-primary">Buy Now!</a> 
+              <a> Rp 150 000</a> 
             </p>
           </div>
         </div>
@@ -174,6 +180,7 @@
             </p>
             <p class="card-text">
               <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a> Rp 150 000</a>
             </p>
           </div>
         </div>
@@ -201,6 +208,7 @@
             </p>
             <p class="card-text">
               <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a> Rp 150 000</a>
             </p>
           </div>
         </div>
@@ -225,6 +233,7 @@
             </p>
             <p class="card-text">
               <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a> Rp 150 000</a>
             </p>
           </div>
         </div>
@@ -249,6 +258,7 @@
             </p>
             <p class="card-text">
               <a href="#" class="btn btn-primary">Buy Now!</a>  
+              <a> Rp 150 000</a>
             </p>
           </div>
         </div>
@@ -256,11 +266,6 @@
     </div>
 
     <div>
-
-
-    
-    
-  
 </div>
     
     
