@@ -1,4 +1,4 @@
-# project-baru
+# Web design and Programming Last Project
 
 ## Project setup
 ```
