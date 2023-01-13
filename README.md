@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 this project is about a e-commerce with api
 ```
-### Project Team:
+### Team:
 ```
 Mochammad Haikal Abyan Gibran - 1402021031
 ```
