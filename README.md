@@ -31,9 +31,12 @@ this project is about a e-commerce with api
 ```
 Mochammad Haikal Abyan Gibran - 1402021031
 ```
+```
 Muhammad Naufal - 1402021040
 ```
+```
 Muhammad Razi Rizzardi - 1402021043
+```
 ```
 Rizvi Hasbi Asibiq - 1402021057
 ```
