@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import LoggedHomeView from '../views/LoggedHome.vue'
-import GameCollections from '../views/GameCollections.vue'
+import HomeView from '../views/Customer/HomeView.vue'
+import GameCollections from '../views/Customer/GameCollections.vue'
+import CartView from '../views/Customer/CartView.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import LoginPage from '../views/LoginPage.vue'
-import CartView from '../views/CartView.vue'
 
 Vue.use(VueRouter)
 
@@ -16,14 +15,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/logged',
-    name: 'logged-home',
-    component: LoggedHomeView
-  },
-  {
     path: '/GameCollections',
     name: 'games',
     component: GameCollections
+  },
+  {
+    path: '/CartView',
+    name: 'cart',
+    component: CartView
   },
   {
     path: '/RegisterPage',
@@ -34,11 +33,6 @@ const routes = [
     path: '/LoginPage',
     name: 'login',
     component: LoginPage
-  },
-  {
-    path: '/CartView',
-    name: 'cartview',
-    component: CartView
   },
   {
     path: '/about',
@@ -54,6 +48,6 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
 export default router

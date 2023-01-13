@@ -40,7 +40,7 @@
         </button>
       </div>
 
-      <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form @submit.prevent="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
           id="input-group-1"
           label="Email address:"
@@ -73,7 +73,9 @@
           </b-form-text>
         </b-form-group>
 
-        <b-button id="btn-login" type="submit" variant="primary">Login</b-button>
+        <b-button id="btn-login" type="submit" variant="primary"
+          >Login</b-button
+        >
         <b-button id="btn-reset" type="reset" variant="danger">Reset</b-button>
       </b-form>
     </div>
@@ -86,10 +88,7 @@ export default {
   name: "LoginPage",
   data() {
     return {
-      listAcc: {
-        email: "",
-        pass: "",
-      },
+      listAcc: [],
       form: {
         email: "",
         pass: "",
@@ -106,39 +105,27 @@ export default {
         .get("http://localhost/API_JokiE-Commerce/api/data/ListAccount.php")
         .then((response) => {
           this.listAcc = response.data;
-          console.log(this.listAcc);
-        });
-    },
-    addData() {
-      axios
-        .post(
-          "http://localhost/API_JokiE-Commerce/api/data/CreateAccount.php",
-          this.form
-        )
-        .then(() => {
-          this.form.email = "";
-          this.form.pass = "";
         });
     },
     onSubmit(event) {
       event.preventDefault();
-      let emailCheck = this.listAcc.find((o) => {
-        if (o.email === this.form.email) {
-          return true; // stop searching
-        } else {
-          return false;
+      let currentAcc=[];
+      let emailPassCheck = false;
+        for(let i=0; i < this.listAcc.length; i++){
+          if(this.listAcc[i].email === this.form.email && this.listAcc[i].pass === this.form.pass){
+            emailPassCheck = true;
+            currentAcc = this.listAcc[i];
+            break;
+          }
         }
-      });
-      let passCheck = this.listAcc.find((o) => {
-        if (o.pass === this.form.pass) {
-          return true; // stop searching
-        } else {
-          return false;
+      if (emailPassCheck) {
+        if(currentAcc.jenis_akun==='admin'){
+          sessionStorage.setItem('account', this.form.email);
+        window.location.href = "/AdminPage";
+        }else{
+          sessionStorage.setItem('account', this.form.email);
+        window.location.href = "/";
         }
-      });
-      if (emailCheck===passCheck) {
-        window.location.href = '/logged';
-        console.log(this.form);
       } else {
         alert("email or password invalid");
       }
@@ -172,12 +159,12 @@ h3 {
   margin-top: 20px;
   text-align: center;
 }
-#btn-login{
-    text-align: center;
-    margin-right: 20px;
+#btn-login {
+  text-align: center;
+  margin-right: 20px;
 }
-#btn-reset{
-    text-align: center;
-    margin-left: 20px;
+#btn-reset {
+  text-align: center;
+  margin-left: 20px;
 }
 </style>

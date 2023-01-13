@@ -73,7 +73,9 @@
           </b-form-text>
         </b-form-group>
 
-        <b-button id="btn-submit" type="submit" variant="primary">Submit</b-button>
+        <b-button id="btn-submit" type="submit" variant="primary"
+          >Submit</b-button
+        >
         <b-button id="btn-reset" type="reset" variant="danger">Reset</b-button>
       </b-form>
       <div class="hypertext">
@@ -91,13 +93,7 @@ export default {
   name: "RegisterPage",
   data() {
     return {
-      listAcc: [
-        {
-          email: "",
-          pass: "",
-          jenis_akun: "user",
-        },
-      ],
+      listAcc: [],
       form: {
         email: "",
         pass: "",
@@ -115,35 +111,38 @@ export default {
         .get("http://localhost/API_JokiE-Commerce/api/data/ListAccount.php")
         .then((response) => {
           this.listAcc = response.data;
-          console.log(this.listAcc);
         });
     },
-    addData() {
+    addData(obj) {
       axios
         .post(
           "http://localhost/API_JokiE-Commerce/api/data/CreateAccount.php",
-          this.form
+          obj
         )
         .then(() => {
           this.form.email = "";
           this.form.pass = "";
         });
     },
-    onSubmit(event) {
-      event.preventDefault();
-      let obj = this.listAcc.find((o) => {
-        if (o.email === this.form.email) {
-          return true; // stop searching
-        } else {
-          return false;
-        }
-      });
-      if (obj) {
-        alert("email already taken");
+    onSubmit() {
+      console.log(this.listAcc)
+      if (this.listAcc.length === 0) {
+        this.addData(this.form);
+        this.$router.push("/LoginPage");
       } else {
-        this.addData();
-        window.location.href = "/LoginPage";
-        console.log(this.form);
+        let checkEmail = false;
+        for(let i=0; i < this.listAcc.length; i++){
+          if(this.listAcc[i].email === this.form.email){
+            checkEmail = true;
+            break;
+          }
+        }
+        if (checkEmail) {
+          alert("email already taken");
+        } else {
+          this.addData(this.form);
+          this.$router.push("/LoginPage");
+        }
       }
     },
     onReset(event) {
@@ -175,8 +174,8 @@ h3 {
   margin-top: 20px;
   text-align: center;
 }
-.hypertext{
-    margin-top: 20px;
+.hypertext {
+  margin-top: 20px;
 }
 .login-button {
   color: rgba(214, 56, 125, 1);
@@ -185,12 +184,12 @@ h3 {
 .login-button:hover {
   font-weight: bold;
 }
-#btn-submit{
-    text-align: center;
-    margin-right: 20px;
+#btn-submit {
+  text-align: center;
+  margin-right: 20px;
 }
-#btn-reset{
-    text-align: center;
-    margin-left: 20px;
+#btn-reset {
+  text-align: center;
+  margin-left: 20px;
 }
 </style>

@@ -20,9 +20,14 @@
             </a>
             <!-- #branding -->
 
-            <div class="login-section" align="right">
+            <div class="login-section" v-if="email==='' || email===null" align="right">
               <router-link class="login-button" to="/RegisterPage"
                 >Login/Register</router-link
+              >
+            </div>
+            <div class="login-section" v-if="email!==null" align="right">
+              <a @click="clicked" class="login-button" href="/"
+                >Logout</a
               >
             </div>
             <!-- .right-section -->
@@ -59,7 +64,7 @@
                       >
                     </li>
                   </ul>
-                  <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                  <ul class="navbar-nav ml-auto mb-2 mb-lg-0" v-if="email!==null">
                     <li class="nav-item">
                       <router-link class="nav-link" to="/CartView">
                         Cart <b-icon-cart4></b-icon-cart4
@@ -81,6 +86,17 @@
 <script>
 export default {
   name: "NavigationBar",
+  data() {
+    return {
+      email: sessionStorage.getItem('account')
+    };
+  },
+  methods: {
+    clicked(){
+      console.log(this.email)
+      sessionStorage.removeItem('account');
+    }
+  }
 };
 </script>
 
